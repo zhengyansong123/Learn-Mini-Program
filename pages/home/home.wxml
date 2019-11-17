@@ -1,3 +1,7 @@
 <!--home/home.wxml-->
-<text class="title">我是首页</text>
-<button size="mini">按钮</button>
+<view>Hello {{name}}</view>
+<view>我的年龄是： {{age+10}}</view>
+<view wx:for="{{students}}" wx:key="key">{{item.name}}---{{item.age}}</view>
+<view>我是数值：{{count}}</view>
+<button size="mini" bindtap="countInsc">点击自加</button>
+<button size="mini" bindtap="countDesc">点击自减</button>

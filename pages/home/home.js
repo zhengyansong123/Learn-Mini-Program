@@ -5,62 +5,24 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    "name" : "北京",
+    "age": 28,
+    "students":[
+      {id:100,"name":"lisi","age":10},
+      {id:120,"name":"wangwu","age":20},
+      {id:130,"name":"zhangsan","age":40}
+    ],
+    "count": 0
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  countInsc(){
+    this.setData({
+      count: this.data.count +1
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  countDesc() {
+    this.setData({
+      count: this.data.count -1
+    })
   }
+  
 })
